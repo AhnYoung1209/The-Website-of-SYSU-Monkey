@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>index</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="index.css" rel="stylesheet">
+<style>
+
+</style>
+</head>
+<body>
+    <div class="header container floatfix">
+    	<div class="logo">
+    		<a href=""><img src="img/logo.png" alt="中山大学灵长类研究团队"></a>
+    	</div>
+
+    	<div class="header-right">
+    		<div class="header-title-container">
+    			<div class="header-title">
+    				<a href="#">English</a>
+    				<a href="#">设为首页</a>
+    				<a href="#">加入收藏</a>
+    			</div>
+    		</div>
+    		<div class="search-container floatfix">
+    			<form action="" class="floatfix">
+    			<input type="text" class="header-keyword text">
+    			<input type="buttom" class="header-submit"/>
+    			</form>
+    		</div>
+    	</div>
+        <div class="header-top-small-container">
+            <span class="header-search-icon" id="js-toggle-search"></span>
+            <span class="header-menu-icon" id="js-toggle-menu"></span> 
+        </div>
+        
+    </div>
+    <div class="header-top-small flofix">
+        <div class="header-search-box-container" id="js-toggle-search-data">
+        <div class="header-search-box">
+            <div class="header-search">
+                <script type="text/javascript" language="javascript">
+                            function GoSearch(){
+                                var Keyword = document.getElementById("Keyword").value;
+                                var IsFuzzy = document.getElementById("IsFuzzy").value;
+                                var CategoryID = document.getElementById("CategoryID").value;
+                                var HasChild = document.getElementById("HasChild").value;
+                                if (Keyword=="关键字"||Keyword=="") {
+                                    return false;
+                                } else{
+                                    window.location.href="http://ch.sysu.edu.cn/bisc/Search.aspx?Keyword="+Keyword+"&"+"IsFuzzy=+on&CategoryID="+CategoryID+"&HasChild=on";
+                                };
+                            }
+                function GoSearch2(){
+                                var Keyword2 = document.getElementById("Keyword2").value;
+                                var IsFuzzy = document.getElementById("IsFuzzy").value;
+                                var CategoryID = document.getElementById("CategoryID").value;
+                                var HasChild = document.getElementById("HasChild").value;
+                                if (Keyword2=="关键字"||Keyword2=="") {
+                                    return false;
+                                } else{
+                                    window.location.href="http://ch.sysu.edu.cn/bisc/Search.aspx?Keyword="+Keyword2+"&"+"IsFuzzy=+on&CategoryID="+CategoryID+"&HasChild=on";
+                                };
+                            }
+                </script>
+                <div class="header-search-inputBox">
+                    <input type="text" class="header-search-input keyword" id="Keyword" value="关键字" onkeypress="if(event.keyCode==13){GoSearch();}">
+                    <input type="hidden" id="IsFuzzy" value="on">
+                    <input type="hidden" id="CategoryID" value="">
+                    <input type="hidden" id="HasChild" value="on">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="small-nav-container" id="js-toggle-nav-data">
+        <div class="header-top-small-nav">
+            <div class="header-top-dropmenu">
+                <div class="header-top-dropmenu-line1">
+                    <a href="#">网站首页</a>
+                    <a href="#">新闻动态</a>
+                    <a href="#">关于我们</a>
+                </div>
+                <div class="header-top-dropmenu-line2">
+                    <a href="#">人才培养</a>
+                    <a href="#">研究成果</a>
+                    <a href="#">开放交流</a>
+                </div>
+                <div class="header-top-dropmenu-line3">
+                    <a href="#">灵长资源</a>
+                    <a href="#">专项基金</a>
+                    <a href="#">联系我们</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav" id="nav">
+        <div class="nav-container container">
+            <ul class="floatfix">
+                <li class="nav-item nav-item-index"><a href="#">网站首页</a></li>
+                <li class="nav-item nav-item-news"><a href="#">新闻动态</a>
+                <ul class="nav-item-child-list">
+                        <li class="nav-item-child notice-child"><a href="">通知公告</a></li>
+                        <li class="nav-item-child tech-child"><a href="">科研动态</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-about"><a href="#">关于我们</a>
+                    <ul class="nav-item-child-list">
+                        <li class="nav-item-child team-child"><a href="">团队简介</a></li>
+                        <li class="nav-item-child teacher-child"><a href="">教师队伍</a></li>
+                        <li class="nav-item-child direct-child"><a href="">研究方向</a></li>
+                        <li class="nav-item-child lab-child"><a href="">实验室管理</a></li>
+                        <li class="nav-item-child base-child"><a href="">校外基地</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-talented"><a href="#">人才培养</a>
+                    <ul class="nav-item-child-list">
+                        <li class="nav-item-child school-child"><a href="">校内教学</a></li>
+                        <li class="nav-item-child student-child"><a href="">历年学生</a></li>
+                        <li class="nav-item-child studentlab-child"><a href="">学生调研</a></li>
+                        <li class="nav-item-child activity-child"><a href="">活动写真</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-achieve"><a href="#">研究成果</a>
+                <ul class="nav-item-child-list">
+                        <li class="nav-item-child book-child"><a href="">论著</a></li>
+                        <li class="nav-item-child project-child"><a href="">科研项目</a></li>
+                        <li class="nav-item-child globalcoo-child"><a href="">国际合作</a></li>
+                        <li class="nav-item-child prize-child"><a href="">获奖</a></li>
+                        <li class="nav-item-child achieve-child"><a href="">代表性成果简介</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-commu"><a href="#">开放交流</a><ul class="nav-item-child-list">
+                        <li class="nav-item-child studycommu-child"><a href="">学术交流</a></li>
+                        <li class="nav-item-child lecture-child"><a href="">专家讲座</a></li>
+                        <li class="nav-item-child outschool-child"><a href="">校外科普</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-source"><a href="#">灵长资源</a>
+                <ul class="nav-item-child-list">
+                        <li class="nav-item-child vedio-child"><a href="">灵长视频</a></li>
+                        <li class="nav-item-child img-child"><a href="">灵长图库</a></li>
+                        <li class="nav-item-child create-child"><a href="">灵长创作</a></li>
+                        <li class="nav-item-child custom-child"><a href="">灵长民俗</a></li>
+                        <li class="nav-item-child other-child"><a href="">其他</a></li>
+                    </ul></li>
+                <li class="nav-item nav-item-fund"><a href="#">专项基金</a></li>
+                <li class="nav-item nav-item-contact"><a href="#">联系我们</a></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <div class="slider-container" id="slider-container">
+        <ul>
+            <li class="slide slider-01">
+                <img src="img/slider/slider1_1920.jpg" alt="">
+            </li>
+            <li class="slide slider-02">
+                <img src="img/slider/slider2_1920.jpg" alt="">
+            </li>
+            <li class="slide slider-03">
+                <img src="img/slider/slider3_1920.jpg" alt="">
+            </li>
+        </ul>
+        <div class="dot-list">
+            <span class="dot dot-now"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <span id="slide-prev"></span>
+        <span id="slide-next"></span>
+    </div>
+    <div class="indexDirection container column-margin animate-startLeft">
+        <h1 class="index-title">研究方向</h1>
+        <ul class="direction-list floatfix">
+            <li class="direction-item">
+                <img src="img/direction-item.png" class="move-right-img" alt="">
+                <h1 class="direction-item-title"><a href="#">灵长类学</a></h1>
+                <div class="direction-item-info">研究灵长类的演化、遗传、行为等，研究对象包括猿猴、新世界猴、旧世界猴、类人猿等</div>
+            </li>
+            <li class="direction-item">
+                <img src="img/direction-item.png" class="move-right-img" alt="">
+                <h1 class="direction-item-title"><a href="#">灵长类学</a></h1>
+                <div class="direction-item-info">研究灵长类的演化、遗传、行为等，研究对象包括猿猴、新世界猴、旧世界猴、类人猿等</div>
+            </li>
+            <li class="direction-item">
+                <img src="img/direction-item.png" class="move-right-img" alt="">
+                <h1 class="direction-item-title"><a href="#">灵长类学</a></h1>
+                <div class="direction-item-info">研究灵长类的演化、遗传、行为等，研究对象包括猿猴、新世界猴、旧世界猴、类人猿等</div>
+            </li>
+            <li class="direction-item">
+                <img src="img/direction-item.png" class="move-right-img" alt="">
+                <h1 class="direction-item-title"><a href="#">灵长类学</a></h1>
+                <div class="direction-item-info">研究灵长类的演化、遗传、行为等，研究对象包括猿猴、新世界猴、旧世界猴、类人猿等</div>
+            </li>
+        </ul>
+    </div>
+    <div class="news-communication">
+    <div class=" container floatfix animate-startRight">
+        <div class="news-column">
+            <h1>新闻动态</h1>
+            <ul class="news-list">
+                <li class="news-item floatfix">
+                 <div class="news-img scale-img-container">
+                        <img src="img/news-img.png" alt="">
+                    </div>
+                    <div class="news-article">
+                        <h1 class="news-title"><a href="#">我是新闻动态下的文章标题</a></h1>
+                        <p class="news-time">2016-5-30</p>
+                        <p class="news-info">我是内容内容我是内容内容我是内容内容我是内容内容我是内容内容我是内容内容我是内容内容我是内容我是内容</p>
+                    </div>
+                   
+                </li>
+                <li class="news-item floatfix">
+                <div class="news-img scale-img-container">
+                        <img src="img/news-img.png" alt="">
+                    </div>
+                    <div class="news-article">
+                        <h1 class="news-title"><a href="#">我是新闻动态下的文章标题</a></h1>
+                        <p class="news-time">2016-5-30</p>
+                        <p class="news-info">我是内容内容我是内容内容我是内容内容我是内容内容我是内容内容我是内容内容我是内容内容</p>
+                    </div>
+                    
+                </li>
+                <li class="news-item floatfix">
+                <div class="news-img scale-img-container">
+                        <img src="img/news-img.png" alt="">
+                    </div>
+                    <div class="news-article">
+                        <h1 class="news-title"><a href="#">我是新闻动态下的文章标题</a></h1>
+                        <p class="news-time">2016-5-30</p>
+                        <p class="news-info">我是内容内容我是内容内容我是内容内容我是内容内容我是内容内容我是内容内容我是内容内容</p>
+                    </div>
+                    
+                </li>
+                
+            </ul>
+        </div>
+        <div class="communication-column">
+            <h1>学术交流</h1>
+            <ul class="floatfix">
+                <li class="communication-item ">
+                <div class="communication-item-img-comtainer scale-img-container">
+                    <img src="img/communication-img.jpg" alt="">
+                    </div>
+                    <h2><a href="#">首届中国非物质文化遗产国际论坛</a></h2>
+                </li>
+                <li class="communication-item ">
+                <div class="communication-item-img-comtainer scale-img-container">
+                    <img src="img/communication-img.jpg" alt="">
+                    </div>
+                    <h2><a href="#">首届中国非物质文化遗产国际论坛</a></h2>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    <div class="indexBase column-margin container animate-startLeft">
+        <h1 class="index-title">野外基地</h1>
+        <ul class="floatfix">
+            <li class="base-item">
+            <div class="base-item-img scale-img-container">
+                <img src="img/base-img.png" alt="">
+                </div> 
+                <h2><a href="#">广东台山上川岛猕猴省级自然保护区</a></h2>
+            </li>
+            <li class="base-item scale-img-container">
+               <div class="base-item-img scale-img-container">
+                <img src="img/base-img.png" alt="">
+                </div> 
+                <h2><a href="#">广东台山上川岛猕猴省级自然保护区</a></h2>
+            </li>
+            <li class="base-item scale-img-container">
+                <div class="base-item-img scale-img-container">
+                <img src="img/base-img.png" alt="">
+                </div> 
+                <h2><a href="#">广东台山上川岛猕猴省级自然保护区</a></h2>
+            </li>
+        </ul>
+    </div>
+    <div class="indexResult">
+        <div class="container animate-startRight">
+            <div class="indexResult-title index-title">研究成果</div>
+            <ul class="indexResult-cardList floatfix">
+                <li class="indexResult-cardItem">
+                    <p class="indexResult-cardTitle">论著</p>
+                    <a href="">
+                        <img class="indexResult-cardImg" src="img/resultImg.jpg">
+                    </a>
+                    <p class="indexResult-cardText">
+                        <a href="">猿猴项目启动</a>
+                    </p>
+                    <p class="indexResult-cardNote">
+                        <a href="">2016-7-6</a></p>
+                    <a href="">
+                        <p class="indexResult-cardMore">更多
+                        </p>
+                    </a>
+                </li>
+                <li class="indexResult-cardItem">
+                    <p class="indexResult-cardTitle">论著</p>
+                    <a href="">
+                        <img class="indexResult-cardImg" src="img/resultImg.jpg">
+                    </a>
+                    <p class="indexResult-cardText">
+                        <a href="">猿猴项目启动</a>
+                    </p>
+                    <p class="indexResult-cardNote">
+                        <a href="">2016-7-6</a></p>
+                    <a href="">
+                        <p class="indexResult-cardMore">更多
+                        </p>
+                    </a>
+                </li>
+                <li class="indexResult-cardItem">
+                    <p class="indexResult-cardTitle">论著</p>
+                    <a href="">
+                        <img class="indexResult-cardImg" src="img/resultImg.jpg">
+                    </a>
+                    <p class="indexResult-cardText">
+                        <a href="">猿猴项目启动</a>
+                    </p>
+                    <p class="indexResult-cardNote">
+                        <a href="">2016-7-6</a></p>
+                    <a href="">
+                        <p class="indexResult-cardMore">更多
+                        </p>
+                    </a>
+                </li>
+                <li class="indexResult-cardItem">
+                    <p class="indexResult-cardTitle">论著</p>
+                    <a href="">
+                        <img class="indexResult-cardImg" src="img/resultImg.jpg">
+                    </a>
+                    <p class="indexResult-cardText">
+                        <a href="">猿猴项目启动</a>
+                    </p>
+                    <p class="indexResult-cardNote">
+                        <a href="">2016-7-6</a></p>
+                    <a href="">
+                        <p class="indexResult-cardMore">更多
+                        </p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+<!-- E 研究成果 -->
+<!-- S 灵长家庭 -->
+    <div class="indexFamily container animate-startLeft">
+        <div class="index-title">灵长家庭</div>
+        <div class="indexFamily-imgbox floatfix">
+            <ul class="indexFamily-imgList">
+                <li class="indexFamily-imgItem scale-img-container">
+                    <img src="img/familyImg.jpg">
+                </li>
+                <li class="indexFamily-imgItem scale-img-container">
+                    <img src="img/familyImg.jpg">
+                </li>
+                <li class="indexFamily-imgItem scale-img-container">
+                    <img src="img/familyImg.jpg">
+                </li>
+                <li class="indexFamily-imgItem scale-img-container">
+                    <img src="img/familyImg.jpg">
+                </li>
+                <li class="indexFamily-imgItem scale-img-container">
+                    <img src="img/familyImg.jpg">
+                </li>
+                <li class="indexFamily-imgItem scale-img-container">
+                    <img src="img/familyImg.jpg">
+                </li>
+                <li class="indexFamily-imgItem scale-img-container">
+                    <img src="img/familyImg.jpg">
+                </li>
+                <li class="indexFamily-imgItem scale-img-container">
+                    <img src="img/familyImg.jpg">
+                </li>
+                <li class="indexFamily-imgItem scale-img-container">
+                    <img src="img/familyImg.jpg">
+                </li>
+                <li class="indexFamily-imgItem scale-img-container">
+                    <img src="img/familyImg.jpg">
+                </li>
+                <li class="indexFamily-imgItem scale-img-container">
+                    <img src="img/familyImg.jpg">
+                </li>
+                <li class="indexFamily-imgItem scale-img-container">
+                    <img src="img/familyImg.jpg">
+                </li><li class="indexFamily-imgItem scale-img-container">
+                    <img src="img/familyImg.jpg">
+                </li>
+                <li class="indexFamily-imgItem scale-img-container">
+                    <img src="img/familyImg.jpg">
+                </li>
+                <li class="indexFamily-imgItem scale-img-container">
+                    <img src="img/familyImg.jpg">
+                </li>
+                <li class="indexFamily-imgItem scale-img-container">
+                    <img src="img/familyImg.jpg">
+                </li>
+                <li class="indexFamily-imgItem scale-img-container">
+                    <img src="img/familyImg.jpg">
+                </li>
+                <li class="indexFamily-imgItem scale-img-container">
+                    <img src="img/familyImg.jpg">
+                </li>
+                <li class="indexFamily-imgItem scale-img-container">
+                    <img src="img/familyImg.jpg">
+                </li>
+                <li class="indexFamily-imgItem scale-img-container">
+                    <img src="img/familyImg.jpg">
+                </li>
+                <li class="indexFamily-imgItem scale-img-container">
+                    <img src="img/familyImg.jpg">
+                </li>
+                <li class="indexFamily-imgItem scale-img-container">
+                    <img src="img/familyImg.jpg">
+                </li>
+                <li class="indexFamily-imgItem scale-img-container">
+                    <img src="img/familyImg.jpg">
+                </li>
+                <li class="indexFamily-imgItem scale-img-container">
+                    <img src="img/familyImg.jpg">
+                </li>
+            </ul>
+        </div>
+    </div>
+<!-- E 灵长家庭 -->
+<!-- S 特色视频 -->
+    <div class="indexVideo container animate-startRight">
+        <div class="index-title">特色视频</div>
+        <div class="indexVideo-videobox">
+            <ul class="indexVideo-videoList floatfix">
+                <li class="indexVideo-videoItem">
+                    <div class="indexVideo-videoBox">
+                        <img src="img/videoImg.jpg">
+                        <div class="indexVideo-videoBc">
+                            <img src="img/videoBc.png">
+                        </div>
+                    </div>
+                    <p class="indexVideo-videoText">进一步完善教学和科研体系，推动灵长类学这一新兴学科的建设。</p>
+                </li>
+                <li class="indexVideo-videoItem">
+                    <div class="indexVideo-videoBox">
+                        <img src="img/videoImg.jpg">
+                        <div class="indexVideo-videoBc">
+                            <img src="img/videoBc.png">
+                        </div>
+                    </div>
+                    <p class="indexVideo-videoText">进一步完善教学和科研体系，推动灵长类学这一新兴学科的建设。</p>
+                </li>
+                <li class="indexVideo-videoItem">
+                    <div class="indexVideo-videoBox">
+                        <img src="img/videoImg.jpg">
+                        <div class="indexVideo-videoBc">
+                            <img src="img/videoBc.png">
+                        </div>
+                    </div>
+                    <p class="indexVideo-videoText">进一步完善教学和科研体系，推动灵长类学这一新兴学科的建设。</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+<!-- E 特色视频 -->
+<!-- S Footer -->
+    <div class="footer">
+        <div class="container floatfix animate-startLeft">
+            <div class="footer-left footer-list-box">
+                <p class="footer-title">校内链接</p>
+                <ul class="footer-list">
+                    <li class="footer-item">
+                        <a href="">中山大学</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="">中山大学教务处</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="">中山大学学生处</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="">中山大学研究生院</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="">中山大学校团委</a>
+                    </li>
+                </ul>
+                <form>
+                    <select name="footer-more">
+                        <option value="" selected="selected">更多...</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                </form>
+            </div>
+
+            <div class="footer-middle footer-list-box">
+                <p class="footer-title">校外链接</p>
+                <ul class="footer-list">
+                    <li class="footer-item">
+                        <a href="">中华人民共和国教育部</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="">中华人民共和国科学技术部</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="">国家自然科学基金委员会</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="">中华人民共和国环境保护部</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="">中国环境科学学会</a>
+                    </li>
+                </ul>
+                <form>
+                    <select name="footer-more ">
+                        <option value="" selected="selected">更多...</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                </form>
+            </div>
+
+            <div class="footer-right footer-list-box">
+                <p class="footer-title">版权信息</p>
+                <ul class="footer-list">
+                    <li class="footer-item">
+                        版权所有<a href=""> © </a>中山大学灵长类与人类进化实验室
+                    </li>
+                    <li class="footer-item">
+                        地址：广东省广州市海珠区新港西路135号
+                    </li>
+                    <li class="footer-item">
+                        邮编：510275
+                    </li>
+                    <li class="footer-item">
+                        电话：020-84118888
+                    </li>
+                    <li class="footer-item">
+                        技术支持：青朴科技
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="slider.js" type="text/javascript" charset="utf-8" async defer></script>
+    <script src="small-header.js" type="text/javascript" charset="utf-8" async defer></script>
+     <script src="index.js" type="text/javascript" charset="utf-8" async defer></script>
+     <script>
+     var nav=document.getElementById("nav");
+     var navTop=nav.offsetTop;
+     function scroll(){
+        if(document.scrollTop>navTop||document.body.scrollTop>navTop){
+            nav.className+=" navfixed";
+        }else{
+            var navclass=nav.className;
+            var navclassArr=navclass.split(" ");
+            for(var i=0;i<navclassArr.length;i++){
+                if(navclassArr[i]=="navfixed"){
+                    navclassArr[i]="";
+                }
+            }
+            nav.className=navclassArr.join(" ");
+        }
+     }
+
+addEvent(document,"scroll",scroll);
+
+//兼容IE10及以下的事件绑定函数
+function addEvent(ele,event,fn){
+    if(window.attachEvent){
+        return ele.attachEvent("on"+event,fn);
+    }else{
+        return ele.addEventListener(event, fn,false);
+    }
+}
+//兼容IE8及以下的获取元素属性函数
+function getStyle(ele,attr){
+    if(ele.currentStyle){
+        return ele.currentStyle[attr];
+    }else{
+        return getComputedStyle(ele)[attr];
+    }
+}
+     </script>
+</body>
+</html>

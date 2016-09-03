@@ -1,0 +1,425 @@
+/***********************************************************************************
+************************************************************************************
+************************************************************************************                                                              
+            Nf                      ,       _,  0p            
+            Q#___,                 Q0       M0, 0# yp         
+         _gp000QM0M                N@       R0& 0&p0&         
+     _q0M#M00M" ~                  06       Q0% M00$          
+    #MM"    Z&                     0Ng_  QF 40 yM06gp         
+         ,yp#00m                 _N000M  #! *MgN00MMM#        
+        ~MM000@` _             _#0000^     _QMMM"~~           
+         g000QggN00H        p0000000#   ,&@~"   gm            
+      _g0#NQ00MM~^^`      _0000000000   "   _pgMM^            
+   _qQ00##00?_g           ]000000000&q      0000gp            
+  Q00M0&"]#p000Q           #0M0M000000&     ppMM0             
+  0MM~   MM&^ #0,              y0000~#M     ~^N&_p#0&         
+        Q0MpggN05             _0000T         jM0#7"~          
+        #0#^B0MM0             QMH"0S     ,g&MM0#              
+       j0M     0&            M"` )#0    #M0"  QF   ,          
+       Q0& Mpgp00                4#S    _0    Q&   N&g        
+      _00&SVM#M00                40&   _gP    06   ]0#z       
+       00 "g   00                Q0t   QB   NM0$    "#P       
+       ~!  ~&g,#0                001         00~              
+             R00#                "0-         ~                
+              "#N                 ~                           
+************************************************************************************ 
+************************************************************************************                                                            
+*******************************      Editor       **********************************
+*******************************   Shaw ; Huruji   **********************************
+************************************************************************************
+************************************************************************************
+*******************************     Designer     ***********************************
+*******************************    ZhengLiang    ***********************************
+************************************************************************************
+***********************************************************************************/
+
+/******** CSS Reset -S ********/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td { padding: 0; margin: 0; }
+img { border: 0; vertical-align: top; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal; }
+input, button, textarea, select { *font-size: 100%; }
+input { background: transparent; border: none; }
+input[type=submit] { cursor: pointer; }
+select {border: solid 1px #d5d5d5; appearance: none; -moz-appearance: none; -webkit-appearance: none; background: url("img/selectBc.png") no-repeat scroll 98% center transparent; background-color: #fff; padding-right: 14px; }
+select::-ms-expand { display: none; }
+body { font: 14px/1.5 Helvetica, Arial, sans-serif; -webkit-text-size-adjust: none; -moz-text-size-adjust: none; -ms-text-size-adjust: none; text-size-adjust: none; }
+ol, ul, li { list-style-type: none; }
+button { border: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+:link, :visited { text-decoration: none; }
+pre { font-family: "Lucida Console", Consolas, "Courier New", Tahoma; color: #666; text-indent: 0; white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word; }
+article, aside, figure, figcaption, footer, header, hgroup, nav, section, summary { display: block; }
+figure { margin: 0; }
+a, a:link, a:visited { color: #1d1d1d; }
+a:hover { color: #007C36; }
+body { font: 14px/1.8 Helvetica, 'Microsoft Yahei', sans-serif; color: #1d1d1d; }
+/******** CSS Reset -E ********/
+
+/******** CSS Public -S ********/
+.column-margin { margin-top: 50px; margin-bottom: 40px; }
+.index-title { margin: 40px 0 20px 0; font-size: 36px; text-align: center; }
+.container { max-width: 1200px; margin: 0 auto; }
+.floatfix { *zoom: 1; }
+.floatfix:after { content: ""; display: table; clear: both; }
+.scale-img-container { overflow: hidden; }
+.scale-img-container img { -webkit-transition: 0.5s; -moz-transition: 0.5s; -o-transition: 0.5s; transition: 0.5s; }
+.scale-img-container img:hover { -webkit-transform: scale(1.1); -moz-transform: scale(1.1); -ms-transform: scale(1.1); -ms-transform: scale(1.1); transform: scale(1.1); }
+.move-right-img { position: relative; -webkit-transition: 0.5s; -moz-transition: 0.5s; -o-transition: 0.5s; transition: 0.5s; }
+.move-right-img:hover { -webkit-transform: translate(5px, 0); -moz-transform: translate(5px, 0); -ms-transform: translate(5px, 0); -o-transform: translate(5px, 0); transform: translate(5px, 0); }
+
+/******** CSS Public -E ********/
+
+/******** CSS Header -S ********/
+.navfixed{position:fixed;top:0;z-index:9999;width:100%;}
+.header-nav-container { display: none; }
+.header { margin-top: 30px; margin-bottom: 25px; position: relative; }
+.logo { float: left; }
+.logo img { vertical-align: top; }
+.header-right { float: right; margin-top: 43px; }
+.header-title a { width: 70px; height: 16px; line-height: 16px; border-right: 1px solid #000; display: inline-block; text-align: center; }
+.header-title a:last-child { border-right: none; }
+.search-container { width: 210px; border-radius: 3px; border: 1px solid #007C36; }
+.header-keyword { width: 176px; height: 35px; float: left; outline: none; }
+.header-submit { background-color: #007C36; background-image: url(img/search-icon.png); background-repeat: no-repeat; background-position: center; float: right; width: 34px; height: 35px; cursor: pointer; }
+.header-menu-icon, .header-search-icon { width: 48px; height: 48px; display: inline-block; }
+.header-menu-icon { background: url(img/small-menu.png); }
+.header-search-icon { background: url(img/small-search.png); }
+.header-top-small-container { height: 48px; width: 100px; position: absolute; right: 30px; bottom: 0; display: none; }
+.header-search-box-container, .small-nav-container { overflow: hidden; height: 0; display: block; }
+.header-search-box { width: 100%; background: #e8e8e6; padding: 3px 0; }
+.header-search { width: 90%; border: 1px solid #d6d6d5; height: 34px; border-radius: 17px; margin: 0 auto; background: #fff; }
+.header-search-input { width: 70%; margin-left: 17px; height: 34px; line-height: 28px; font-size: 14px; color: #7B7B7B; outline: none; }
+.header-top-dropmenu { width: 100%; display: table; background: #e8e8e6; display: table; z-index: 999; }
+.header-top-dropmenu-line1, .header-top-dropmenu-line2, .header-top-dropmenu-line3 { display: table-row; height: 48px; line-height: 48px; }
+.header-top-dropmenu-line1 a { border-bottom: 1px solid #c6c6c6; }
+.header-top-dropmenu-line2 a { border-top: 1px solid #fff; border-bottom: 1px solid #c6c6c6; }
+.header-top-dropmenu-line3 a { border-top: 1px solid #fff; }
+.header-top-dropmenu-line3 { border-top: 1px solid #fff; }
+.header-top-dropmenu a { color: #787878; line-height: 48px; display: table-cell; text-align: center; font-size: 16px; font-family: "Microsoft Yahei"; }
+/******** CSS Header -E ********/
+
+/******** CSS Nav -S ********/
+.nav{background:url(img/nav-bg.gif) repeat;width:100%;height:50px;margin-bottom:1px;}
+.nav-item{width:11.11111%;height:50px;background-repeat:no-repeat;background-position:center;float:left;}
+.nav-item:last-child{margin-right:0;}
+@-webkit-keyframes nav {
+  0% { -webkit-transform: translate(0, 15px); opacity: 0.3; }
+  100% { -webkit-transform: translate(0, 0); opacity: 1; }
+}
+.nav-item-child-list { display: none; }
+.nav-item:hover .nav-item-child-list { display: block; -webkit-animation: nav 0.5s ease; }
+.nav-item { text-indent: -9999px; }
+.nav-item a{width:100%;height:100%;display:block;}
+.nav-item-index{background-image:url(img/nav-index.png);}
+.nav-item-news{background-image:url(img/nav-news.png);}
+.nav-item-about{background-image:url(img/nav-about.png);}
+.nav-item-talented{background-image:url(img/nav-talented.png);}
+.nav-item-achieve{background-image:url(img/nav-achieve.png);}
+.nav-item-commu{background-image:url(img/nav-commu.png);}
+.nav-item-source{background-image:url(img/nav-source.png);}
+.nav-item-fund{background-image:url(img/nav-fund.png);}
+.nav-item-contact{background-image:url(img/nav-contact.png);}
+.nav-item { position: relative; }
+.nav-item-child-list { z-index: 999999999; position: absolute; top: 50px; width: 100%; background: rgba(255, 255, 255, 0.9); }
+.nav-item-child { height: 50px; width: 100%; background-repeat: no-repeat; background-position: center; }
+.notice-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1920/notice-child-w1.png); background-repeat: no-repeat; background-position: center; }
+.notice-child { background-image: url(img/nav-child/1920/notice-child-g1.png); }
+.tech-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1920/tech-child-w1.png); background-repeat: no-repeat; background-position: center; }
+.tech-child { background-image: url(img/nav-child/1920/tech-child-g1.png); }
+.team-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1920/team-child-w1.png); background-repeat: no-repeat; background-position: center; }
+.team-child { background-image: url(img/nav-child/1920/team-child-g1.png); }
+.teacher-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1920/teacher-child-w1.png); background-repeat: no-repeat; background-position: center; }
+.teacher-child { background-image: url(img/nav-child/1920/teacher-child-g1.png); }
+.direct-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1920/direct-child-w1.png); background-repeat: no-repeat; background-position: center; }
+.direct-child { background-image: url(img/nav-child/1920/direct-child-g1.png); }
+.lab-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1920/lab-child-w1.png); background-repeat: no-repeat; background-position: center; }
+.lab-child { background-image: url(img/nav-child/1920/lab-child-g1.png); }
+.base-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1920/base-child-w1.png); background-repeat: no-repeat; background-position: center; }
+.base-child { background-image: url(img/nav-child/1920/base-child-g1.png); }
+.school-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1920/school-child-w1.png); background-repeat: no-repeat; background-position: center; }
+.school-child { background-image: url(img/nav-child/1920/school-child-g1.png); }
+.student-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1920/student-child-w1.png); background-repeat: no-repeat; background-position: center; }
+.student-child { background-image: url(img/nav-child/1920/student-child-g1.png); }
+.studentlab-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1920/studentlab-child-w1.png); background-repeat: no-repeat; background-position: center; }
+.studentlab-child { background-image: url(img/nav-child/1920/studentlab-child-g1.png); }
+.activity-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1920/activity-child-w1.png); background-repeat: no-repeat; background-position: center; }
+.activity-child { background-image: url(img/nav-child/1920/activity-child-g1.png); }
+.book-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1920/book-child-w1.png); background-repeat: no-repeat; background-position: center; }
+.book-child { background-image: url(img/nav-child/1920/book-child-g1.png); }
+.project-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1920/project-child-w1.png); background-repeat: no-repeat; background-position: center; }
+.project-child { background-image: url(img/nav-child/1920/project-child-g1.png); }
+.globalcoo-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1920/globalcoo-child-w1.png); background-repeat: no-repeat; background-position: center; }
+.globalcoo-child { background-image: url(img/nav-child/1920/globalcoo-child-g1.png); }
+.prize-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1920/prize-child-w1.png); background-repeat: no-repeat; background-position: center; }
+.prize-child { background-image: url(img/nav-child/1920/prize-child-g1.png); }
+.achieve-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1920/achieve-child-w1.png); background-repeat: no-repeat; background-position: center; }
+.achieve-child { background-image: url(img/nav-child/1920/achieve-child-g1.png); }
+.studycommu-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1920/studycommu-child-w1.png); background-repeat: no-repeat; background-position: center; }
+.studycommu-child { background-image: url(img/nav-child/1920/studycommu-child-g1.png); }
+.lecture-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1920/lecture-child-w1.png); background-repeat: no-repeat; background-position: center; }
+.lecture-child { background-image: url(img/nav-child/1920/lecture-child-g1.png); }
+.outschool-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1920/outschool-child-w1.png); background-repeat: no-repeat; background-position: center; }
+.outschool-child { background-image: url(img/nav-child/1920/outschool-child-g1.png); }
+.vedio-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1920/vedio-child-w1.png); background-repeat: no-repeat; background-position: center; }
+.vedio-child { background-image: url(img/nav-child/1920/vedio-child-g1.png); }
+.img-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1920/img-child-w1.png); background-repeat: no-repeat; background-position: center; }
+.img-child { background-image: url(img/nav-child/1920/img-child-g1.png); }
+.create-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1920/create-child-w1.png); background-repeat: no-repeat; background-position: center; }
+.create-child { background-image: url(img/nav-child/1920/create-child-g1.png); }
+.custom-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1920/custom-child-w1.png); background-repeat: no-repeat; background-position: center; }
+.custom-child { background-image: url(img/nav-child/1920/custom-child-g1.png); }
+.other-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1920/other-child-w1.png); background-repeat: no-repeat; background-position: center; }
+.other-child { background-image: url(img/nav-child/1920/other-child-g1.png); }
+/******** CSS Header -E ********/
+
+/******** CSS Slider -S ********/
+.slider-container { width: 100%; height: 459px; position: relative; overflow: hidden; }
+.slider-container ul { height: 100%; }
+.slide img{width:100%;}
+.slider-container ul li { position: absolute; top: 0; left: 0; height: 100%; width: 100%; opacity: 0; z-index: 0; }
+.slider-container ul li:first-child { opacity: 1; }
+.dot-list { position: absolute; bottom: 20px; left: 48%; }
+.dot { width: 10px; height: 8px; background: #fff; display: inline-block; }
+.dot-now { width: 20px; background: #007C36; }
+#slide-prev { background: url(img/arl.png) no-repeat center; height: 100%; width: 50px; position: absolute; left: -50px; top: 0; z-index: 99; cursor: pointer; }
+#slide-next { background: url(img/arr.png) no-repeat center; height: 100%; width: 50px; right: -50px; top: 0; z-index: 999999; position: absolute; cursor: pointer; }
+/******** CSS Slider -E ********/
+
+/******** CSS 研究方向 -S ********/
+.direction-item { width: 23.75%; margin-right: 1.66666667%; float: left; }
+.indexDirection{margin-bottom:40px;}
+.direction-item img { width: 100%; }
+.direction-item:last-child { margin-right: 0; }
+.direction-item-title { font-size: 20px; line-height: 60px; height: 60px; }
+.direction-item-info { font: 14px; line-height: 1.5em }
+/******** CSS 研究方向 -E ********/
+
+/******** CSS 新闻动态/学术交流 -S ********/
+.news-communication { background: #f8f8f8; padding-bottom: 36px; }
+.news-communication .container{padding-top: 10px}
+.news-column, .communication-column { float: left; }
+.communication-column { width: 31.6666667%; }
+.news-title { white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+.news-column { width: 63.3333333%; margin-right: 5%; }
+.news-column h1, .communication-column h1 { font-size: 22px; line-height: 60px; height: 60px; }
+.news-item { margin-bottom: 24px; position: relative; }
+.news-item:last-child { margin-bottom: 0; }
+.news-img { float: left; margin-right: 2.10526316%; width: 28.9473684%; }
+.news-img img { width: 100%; }
+.news-article { float: left; width: 68.94736844%;}
+.news-time { color: #37b400; font-size: 14px; margin-bottom: 20px; }
+.news-article .news-title { font-family: STKaiti, 华文楷体; height: 1.2em; line-height: 1.2em; margin-bottom: 10px; }
+.news-info { font-size: 14px; }
+.communication-item-img-comtainer { margin-bottom: 8px; }
+.communication-item h2 { text-align: center; }
+.communication-item h2 a { font-family: STKaiti, 华文楷体; font-size: 22px; line-height: 1em; }
+.communication-item { margin-bottom: 22px; }
+.communication-item img { width: 100%; }
+.communication-item:last-child { margin-bottom: 0; }
+/******** CSS 新闻动态/学术交流 -E ********/
+
+/******** CSS 野外基地 -S ********/
+.base-item h2 { text-align: center; }
+.base-item h2 a { font-family: STKaiti, 华文楷体; font-size: 22px; line-height: 1em; }
+.base-item { width: 31.6666667%; margin-right: 2.5%; float: left; }
+.base-item img { vertical-align: top;width: 100%; }
+.base-item-img { margin-bottom: 16px; }
+.base-item:last-child { margin-right: 0; }
+.indexBase .index-title { margin-top: 40px; margin-bottom: 30px; }
+.indexBase { margin-top: 0; margin-bottom:40px;}
+/******** CSS 野外基地 -E ********/
+
+/******** CSS 研究结果 -S ********/
+.indexResult { background: url('img/resultBc.jpg') no-repeat; background-attachment: fixed; background-position: 0% 50%; }
+.indexResult { width: 100%; padding: 25px 0; }
+.indexResult-title { color: #fff; text-align: center; }
+.indexResult-cardItem { background-color: #fff; float: left; opacity: 0.8; padding: 1%; width: 22%; margin: 10px 1.333333% 0 0; }
+.indexResult-cardItem:last-child { margin-right: 0 !important; }
+.indexResult-cardTitle { font-size: 22px; }
+.indexResult-cardImg { width: 100%; margin: 5px auto; }
+.indexResult-cardText { font-size: 18px; }
+.indexResult-cardNote a { font-family: 14px; color: #37b400; }
+.indexResult-cardMore { border-radius: 5px; text-align: center; cursor: pointer; line-height: 40px; height: 40px; border: 1px solid #000; width: 40%; margin-top: 5px; }
+.indexResult-cardMore:hover { background-color: #00853a; color: #fff; }
+.indexResult-cardList { margin-bottom: 20px; }
+/******** CSS 研究结果 -E ********/
+
+/******** CSS 灵长家庭 -S ********/
+.indexFamily-imgbox { width: 100%; }
+.indexFamily-imgItem { float: left; width: 7.5%; margin: 10px 0.909090909% 2px 0; }
+.indexFamily-imgItem:last-child, .indexFamily-imgItem:nth-child(12) { margin-right: 0 !important; }
+.indexFamily-imgItem img { width: 100%; }
+/******** CSS 灵长家庭 -E ********/
+
+/******** CSS 特色视频 -S ********/
+.indexVideo-videoItem { width: 32%; margin: 0 2% 10px 0; float: left; }
+.indexVideo-videoItem:last-child { margin-right: 0 !important; }
+.indexVideo-videoItem img { width: 100%; }
+.indexVideo-videoBox { position: relative; width: 100%; }
+.indexVideo-videoBc { position: absolute; background-color: #000; opacity: 0.5; display: none; top: 0; width: 100%; text-align: center; height: 100%; }
+.indexVideo-videoBc img { width: 26%; position: absolute; top: 50%; left: 50%; margin: -12% 0 0 -12%; }
+.indexVideo-videoBox:hover .indexVideo-videoBc { display: block; }
+.indexVideo-videoText { margin: 5px 0 0 0; font-size: 20px; font-family: STKaiti, 华文楷体; line-height: 27px; }
+/******** CSS 特色视频 -E ********/
+
+/******** CSS 特色视频 -S ********/
+.footer { background: url('img/footBc.jpg') no-repeat; height: 200px; padding: 50px 0 80px 0; margin-top: 50px; }
+.footer .container { position: relative; }
+.footer-list * { color: #fff !important; }
+.footer-list { margin-top: 6px; }
+.footer-item { margin-top: 3px; }
+.footer-title { color: #fff; font-size: 20px; font-family: STKaiti, 华文楷体; }
+.footer-item { font-size: 14px; }
+.footer form { margin-top: 10px; }
+.footer form select { width: 210px; height: 28px; padding-left: 5px; }
+.footer-list-box { width: 32%; margin: 0 2% 10px 0; float: left; }
+.footer-list-box:last-child { margin-right: 0; }
+/******** CSS 特色视频 -E ********/
+
+
+/******** CSS Reponsitive -S ********/
+@media (max-width:1200px) {
+  .container { padding: 0 15px; }
+}
+@media screen and (max-width:1024px) {
+  .notice-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1024/notice-child-w2.png); background-repeat: no-repeat; background-position: center; }
+  .notice-child { background-image: url(img/nav-child/1024/notice-child-g2.png); }
+  .tech-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1024/tech-child-w2.png); background-repeat: no-repeat; background-position: center; }
+  .tech-child { background-image: url(img/nav-child/1024/tech-child-g2.png); }
+  .team-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1024/team-child-w2.png); background-repeat: no-repeat; background-position: center; }
+  .team-child { background-image: url(img/nav-child/1024/team-child-g2.png); }
+  .teacher-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1024/teacher-child-w2.png); background-repeat: no-repeat; background-position: center; }
+  .teacher-child { background-image: url(img/nav-child/1024/teacher-child-g2.png); }
+  .direct-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1024/direct-child-w2.png); background-repeat: no-repeat; background-position: center; }
+  .direct-child { background-image: url(img/nav-child/1024/direct-child-g2.png); }
+  .lab-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1024/lab-child-w2.png); background-repeat: no-repeat; background-position: center; }
+  .lab-child { background-image: url(img/nav-child/1024/lab-child-g2.png); }
+  .base-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1024/base-child-w2.png); background-repeat: no-repeat; background-position: center; }
+  .base-child { background-image: url(img/nav-child/1024/base-child-g2.png); }
+  .school-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1024/school-child-w2.png); background-repeat: no-repeat; background-position: center; }
+  .school-child { background-image: url(img/nav-child/1024/school-child-g2.png); }
+  .student-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1024/student-child-w2.png); background-repeat: no-repeat; background-position: center; }
+  .student-child { background-image: url(img/nav-child/1024/student-child-g2.png); }
+  .studentlab-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1024/studentlab-child-w2.png); background-repeat: no-repeat; background-position: center; }
+  .studentlab-child { background-image: url(img/nav-child/1024/studentlab-child-g2.png); }
+  .activity-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1024/activity-child-w2.png); background-repeat: no-repeat; background-position: center; }
+  .activity-child { background-image: url(img/nav-child/1024/activity-child-g2.png); }
+  .book-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1024/book-child-w2.png); background-repeat: no-repeat; background-position: center; }
+  .book-child { background-image: url(img/nav-child/1024/book-child-g2.png); }
+  .project-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1024/project-child-w2.png); background-repeat: no-repeat; background-position: center; }
+  .project-child { background-image: url(img/nav-child/1024/project-child-g2.png); }
+  .globalcoo-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1024/globalcoo-child-w2.png); background-repeat: no-repeat; background-position: center; }
+  .globalcoo-child { background-image: url(img/nav-child/1024/globalcoo-child-g2.png); }
+  .prize-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1024/prize-child-w2.png); background-repeat: no-repeat; background-position: center; }
+  .prize-child { background-image: url(img/nav-child/1024/prize-child-g2.png); }
+  .achieve-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1024/achieve-child-w2.png); background-repeat: no-repeat; background-position: center; }
+  .achieve-child { background-image: url(img/nav-child/1024/achieve-child-g2.png); }
+  .studycommu-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1024/studycommu-child-w2.png); background-repeat: no-repeat; background-position: center; }
+  .studycommu-child { background-image: url(img/nav-child/1024/studycommu-child-g2.png); }
+  .lecture-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1024/lecture-child-w2.png); background-repeat: no-repeat; background-position: center; }
+  .lecture-child { background-image: url(img/nav-child/1024/lecture-child-g2.png); }
+  .outschool-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1024/outschool-child-w2.png); background-repeat: no-repeat; background-position: center; }
+  .outschool-child { background-image: url(img/nav-child/1024/outschool-child-g2.png); }
+  .vedio-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1024/vedio-child-w2.png); background-repeat: no-repeat; background-position: center; }
+  .vedio-child { background-image: url(img/nav-child/1024/vedio-child-g2.png); }
+  .img-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1024/img-child-w2.png); background-repeat: no-repeat; background-position: center; }
+  .img-child { background-image: url(img/nav-child/1024/img-child-g2.png); }
+  .create-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1024/create-child-w2.png); background-repeat: no-repeat; background-position: center; }
+  .create-child { background-image: url(img/nav-child/1024/create-child-g2.png); }
+  .custom-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1024/custom-child-w2.png); background-repeat: no-repeat; background-position: center; }
+  .custom-child { background-image: url(img/nav-child/1024/custom-child-g2.png); }
+  .other-child a:hover { background: rgba(0, 124, 54, 0.9); background-image: url(img/nav-child/1024/other-child-w2.png); background-repeat: no-repeat; background-position: center; }
+  .other-child { background-image: url(img/nav-child/1024/other-child-g2.png); }
+  .nav-item-index { background-image: url(img/nav/nav-index2.png); }
+  .nav-item-news { background-image: url(img/nav/nav-news2.png); }
+  .nav-item-about { background-image: url(img/nav/nav-about2.png); }
+  .nav-item-talented { background-image: url(img/nav/nav-talented2.png); }
+  .nav-item-achieve { background-image: url(img/nav/nav-achieve2.png); }
+  .nav-item-commu { background-image: url(img/nav/nav-commu2.png); }
+  .nav-item-source { background-image: url(img/nav/nav-source2.png); }
+  .nav-item-fund { background-image: url(img/nav/nav-fund2.png); }
+  .nav-item-contact { background-image: url(img/nav/nav-contact2.png); }
+  .nav { height: 36px; }
+  .nav-item-child { height: 36px; }
+  .nav-item { height: 36px; }
+  .nav-item-child-list { top: 36px; }
+}
+@media screen and (max-width:960px) {
+  .news-column { width: 100%; margin-right: 0; }
+  .communication-column { width: 100%; }
+  .communication-item { float: left; margin-right: 3.125%; width: 48.4375%; }
+  .communication-item:last-child { margin-right: 0; }
+}
+@media screen and (max-width:850px) {
+  .header-right { width: 180px; }
+  .search-container { width: 180px; }
+  .header-keyword { width: 146px; }
+  .header-title a { width: 56px; }
+  .logo { width: 73%; }
+  .logo img { width: 100%; }
+}
+@media (max-width:768px) {
+  .header-right, .nav { display: none; }
+  .header-top-small-container { display: block; }
+  .container { padding: 0 30px; }
+  .indexResult-cardItem { padding: 2%; width: 44%; margin: 10px 4% 20px 0; }
+  .indexResult-cardItem:nth-child(2) { margin-right: 0 !important; }
+  .indexFamily-imgItem:nth-child(8), .indexFamily-imgItem:nth-child(16) { margin-right: 0 !important; }
+  .indexFamily-imgItem:nth-child(12) { margin-right: 1.71428571% !important; }
+  .indexFamily-imgItem { float: left; width: 11%; margin: 10px 1.71428571% 2px 0; }
+}
+@media (max-width:560px) {
+  .indexResult-cardItem { padding: 4%; width: 60%; float: none; margin: 30px auto; }
+  .indexResult-cardItem:nth-child(2), .indexResult-cardItem:last-child { margin-right: auto !important; }
+  .indexFamily-imgItem { width: 14%; margin: 10px 2.5% 2px 0; }
+  .indexFamily-imgItem:nth-child(8), .indexFamily-imgItem:nth-child(16) { margin-right: 2.5% !important; }
+  .indexFamily-imgItem:nth-child(6), .indexFamily-imgItem:nth-child(12), .indexFamily-imgItem:nth-child(18) { margin-right: 0 !important; }
+  .indexVideo-videoItem { width: 97%; margin: 0 2% 10px 0; float: none; margin: 20px auto; }
+  .indexVideo-videoItem:last-child { margin-right: auto !important; }
+}
+/******** CSS Reponsitive -E ********/
+
+/******** CSS IndexAnimate -S ********/
+@keyframes startLeft {
+  0% { transform: translateX(-1000px); opacity: 0; }
+  90% { transform: translateX(10px); opacity: 1; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+@-moz-keyframes startLeft {
+  0% { transform: translateX(-1000px); opacity: 0; }
+  90% { transform: translateX(10px); opacity: 1; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+@-webkit-keyframes startLeft {
+  0% { transform: translateX(-1000px); opacity: 0; }
+  90% { transform: translateX(10px); opacity: 1; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+@-o-keyframes startLeft {
+  0% { transform: translateX(-1000px); opacity: 0; }
+  90% { transform: translateX(10px); opacity: 1; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes startRight {
+  0% { transform: translateX(1000px); opacity: 0; }
+  90% { transform: translateX(-10px); opacity: 1; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+@-moz-keyframes startRight {
+  0% { transform: translateX(1000px); opacity: 0; }
+  90% { transform: translateX(-10px); opacity: 1; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+@-webkit-keyframes startRight {
+  0% { transform: translateX(1000px); opacity: 0; }
+  90% { transform: translateX(-10px); opacity: 1; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+@-o-keyframes startRight {
+  0% { transform: translateX(1000px); opacity: 0; }
+  90% { transform: translateX(-10px); opacity: 1; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+.animate-startLeft { animation: startLeft 2s cubic-bezier(.51, .74, .21, 1.07); -moz-animation: startLeft 2s cubic-bezier(.51, .74, .21, 1.07); -o-animation: startLeft 2s cubic-bezier(.51, .74, .21, 1.07); -webkit-animation: startLeft 2s cubic-bezier(.51, .74, .21, 1.07); }
+.animate-startRight { animation: startRight 2s cubic-bezier(.51, .74, .21, 1.07); -moz-animation: startRight 2s cubic-bezier(.51, .74, .21, 1.07); -o-animation: startRight 2s cubic-bezier(.51, .74, .21, 1.07); -webkit-animation: startRight 2s cubic-bezier(.51, .74, .21, 1.07); }
+/******** CSS IndexAnimate -E ********/
