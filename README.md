@@ -1,5 +1,4 @@
 # The-Website-of-SYSU-Monkey
-中山大学灵长类与人类进化实验室网站
-暂时请用中山大学内网访问：
+中山大学灵长类与人类进化实验室网站，目前已上线，请访问：
 
-[http://202.116.65.194/](http://202.116.65.194/)
+[http://primates.sysu.edu.cn/](http://primates.sysu.edu.cn/)
